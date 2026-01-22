@@ -2,10 +2,10 @@
 // a = 3; //error
 // console.log(a);
 
-let b = 10;
-b = 11; //changed
-var c = 20;
-c = 22; //changed
+let b = 20;
+b = 10; //changed
+var c = 30;
+c = 40; //changed
 console.log(b);
 document.writeln(b + "<br>");
 console.log(c);
@@ -35,7 +35,7 @@ document.writeln("Student Email : " + email + "<br>");
 
 //activity NO 2
 //check no even or odd
-num = 2;
+num = 26;
 if (num % 2 == 0) {
   console.log("EVEN NUMBER", num);
   document.writeln("Even No :" + num + "<br>");
@@ -46,7 +46,7 @@ if (num % 2 == 0) {
 
 //activity NO 3
 //check student pass or fail
-let marks = 45;
+let marks = 50;
 if (marks >= 40) {
   console.log("PASS", marks);
   document.writeln("Pass :" + marks + "<br>");
@@ -63,7 +63,7 @@ for (let i = 1; i <= 10; i++) {
 }
 
 //activity NO 5
-let p = 10;
+let p = 17;
 r = p;
 p = 2005;
 console.log(p, r);
