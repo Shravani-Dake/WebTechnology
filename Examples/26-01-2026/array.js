@@ -6,9 +6,9 @@ console.log("Original numbers:", numbers);
 console.log("Original names:", names);
 
 // ---------------- ADD & REMOVE METHODS ----------------
-
+s
 // push() - add at end
-numbers.push(60);
+numbers.push(60);no
 console.log("After push:", numbers);
 
 // pop() - remove from end
