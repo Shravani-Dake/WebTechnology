@@ -111,12 +111,16 @@ function fibonacci(n) {
         a = b;
         b = c;
     }
+
     return series;
 }
 
+let input = 7;
+
 document.getElementById("activity7").innerHTML =
-"<h3>Activity 7: Fibonacci Series</h3>" +
-"Series: " + fibonacci(7);
+    "<h3>Activity 7: Fibonacci Series</h3>" +
+    "Input : " + input + "<br>" +
+    "Result : " + fibonacci(input);
 
 
 // Activity 8 – Palindrome Check
