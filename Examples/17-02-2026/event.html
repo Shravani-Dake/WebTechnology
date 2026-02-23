@@ -1,0 +1,161 @@
+<!-- 
+Event : it is an action that happens in a browser.
+        examples, clicking a button, moving a mouse, pressing a key, submitting forms, 
+        loadings pages.
+        js can detect this events and ressponds to them.
+
+Types of Events : 
+1. mouse events : click, dblclick, mouseover, mouseout.
+2. keyboard events : keydown, keyup.
+3. browser events : load, resize, scroll.
+
+html should contain structure js should contains objects.
+so mixing both is bad practice and hard to maintain big projects.
+it is not good way -- onclick="alert('I am lion')"
+good way is -- document.getElementById('tiger').onclick= function (){ alert('click')};
+
+what happens with good way code -- select element assign function to click event whwen clicked function runs.
+problem -- cannot handle multiple listers properly.
+another good way is -- add event lister 
+add event listner is a js method used to attach an event handler to an html element
+so that specific function get runs when a perticular event occurs.
+
+jquery what is
+type timestamp default prevented target source element current target client X , client Y, screen X , screen Y, alt key, control key ], shift key
+defalult it is false.
+event propagation : false --  event goes to inner element to parent and parent to document. (child to parent)
+event capturing : true (parent to child)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Events Demo</title>
+
+    <style>
+        body {
+            background-color: #414141;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 15px;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        a {
+            color: lightblue;
+            font-size: 18px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h2>Amazing Images (Click to Remove)</h2>
+
+    <ul id="images">
+        <li>
+            <img id="photoshop"
+                src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg"
+                onclick="alert('Photoshop Logo Clicked!')"
+                alt="Photoshop Logo">
+        </li>
+
+        <li>
+            <img id="japan"
+                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                alt="Mount Fuji">
+        </li>
+
+        <li>
+            <img id="Nature"
+                src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b"
+                alt="Nature Image">
+        </li>
+
+        <li>
+            <img id="photoman"
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                alt="Photographer">
+        </li>
+
+        <li>
+            <img id="tiger"
+                src="https://images.unsplash.com/photo-1546182990-dffeafbe841d"
+                alt="Tiger">
+        </li>
+
+        <li>
+            <a href="https://google.com" id="google">Visit Google</a>
+        </li>
+    </ul>
+  </body>
+
+  <script>
+
+    // Adding event listener to the tiger image using onclick property
+    document.getElementById('tiger').onclick = function() {
+        alert('Tiger Image Clicked!');
+    };
+    
+    // Logs the event object to the console
+    document.getElementById("japan").addEventListener("click", function(e) {
+        console.log(e); 
+        alert("Mount Fuji Clicked!");
+    });
+
+    // Adding event listeners to images
+    document.getElementById("Nature").addEventListener("click", function() {
+        alert("Nature Image Clicked!");
+    });
+
+    document.getElementById("photoman").addEventListener("click", function() {
+        alert("Photographer Image Clicked!");
+    });
+
+    // Adding event listener to the link
+    document.getElementById("google").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevents the default action of the link
+        alert("Google Link Clicked! Navigating to Google...");
+        window.location.href = "https://google.com"; // Redirects to Google
+    });
+
+    // Event propagation
+    document.getElementById("images").addEventListener("click", function() {
+        //alert("Image List Clicked!");
+        console.log("Event Propagation : Image List Clicked inside the ul !");
+    });
+
+    document.getElementById("photoshop").addEventListener("click", function() {
+        //alert("Photoshop Logo Clicked!");
+        console.log("Event Propagation : Photoshop Logo Clicked inside the ul !");
+    }, true);
+document.getElementById("google").addEventListener("click", function(e) {
+        //alert("google Clicked!");
+        console.log("google clicked");
+        e.preventDefault();
+    }, false);
+
+
+  </script>
+  </html>
