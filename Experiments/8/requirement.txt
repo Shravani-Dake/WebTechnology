@@ -1,0 +1,5 @@
+npm install -g @angular/cli
+ng new student-manangement-system
+ng serve-0
+ng serve
+ng s
