@@ -1,0 +1,15 @@
+express handles http request and response.
+
+request means client to server.
+request object contains information about client request.
+examples : URL, headers, query parameters, request body.
+
+app.get('/',(req,res)=>{
+    console.log(req.query.name)
+});
+query parameters : user ? name = shravani 
+
+detailed study for query parameters.
+3-4 real life examples
+use in company level
+
