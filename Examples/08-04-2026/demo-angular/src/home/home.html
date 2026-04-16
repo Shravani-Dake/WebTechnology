@@ -1,0 +1,32 @@
+<h1>Welcome to Student Management System</h1>
+<p>Student Details !!</p>
+{{fname}}
+{{myRoll}}
+{{course}}
+<br><br>
+<img [src]="src">
+<br><br>
+<!-- //Two way ng model -->
+<input [(ngModel)]="fname" placeholder="Firstname :"><br><br>
+<input [(ngModel)]="myRoll" placeholder="Roll No :"><br><br>
+<input [(ngModel)]="course" placeholder="Course :"><br><br>
+
+<h2>Fruits List</h2>
+
+<ul>
+    <li *ngFor="let hero of heroes">
+        {{ hero }}
+    </li>
+</ul>
+
+<h2>Student Update</h2>
+<p>Event Binding </p>
+<input type="text" placeholder="Enter Name" [(ngModel)]="newStudent.name">
+<br><br>
+<input type="text" placeholder="Enter Age" [(ngModel)]="newStudent.age">
+<br><br>
+<input type="text" placeholder="Enter course" [(ngModel)]="newStudent.course">
+<br><br>
+
+<button (click)="updateStudent()">Update Stuent</button>
+
