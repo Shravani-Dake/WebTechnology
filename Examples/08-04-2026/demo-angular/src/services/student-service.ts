@@ -14,5 +14,9 @@ getStudents(){
   return this.students;
 }
 
+addStudent(student: any){
+  this.students.push(student);
+}
+
   
 }
