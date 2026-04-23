@@ -1,0 +1,67 @@
+-react is js library developed by meta to build a fast and interactive interfaces
+-it is single page application(SPA)
+
+page doesnot reload,only conetent change
+ex- ig,fb,yt
+
+why do we use react/problem with js ?
+-fully page reload , copmlex dom manipulation , hard to manage large application 
+solution -> updates only require parts to use reusable components
+
+virtual DOM - is a lightweight copy of the real DOM used by React to improve performance.
+- when data changes react updates virtual dom 
+- update only changed the part in the dom
+- high performance 
+
+vite - is a fast build tool
+npm install means install dependencies 
+npm run dev is start server
+
+renders everything inside it : index.html
+js + xml which allows to write html code inside js : main.jsx
+entry point of react app : main.jsx
+
+example of jsx : const element = <h1> Hello React </h1>
+
+Rules for jsx
+- must return single parent
+- use {} for js
+
+componet :
+it is heart of react.
+types of componet :
+1. functional component : function addstudent(){ return <h1> Functional Component </h1>}
+Use Component : function app(){ return <> <addstudent/> </> }
+to print single sentence multiple times :
+call same function that times <addstudent/> <addstudent/> this print  functional component 2 times.
+example : function app(){ return <> <addstudent/> <addstudent/> </> }
+
+PROPS : Properties
+it means data passed from parent to child 
+in above example app() is parent and addstudent() is child 
+example for parent : function app(){ return <addstudent fname = "shravani" /> }
+example for child : function addstudent(props) { return <h1> name : {props.fname} </h1>}
+
+-- How to create project in react --
+node -v
+npm -v
+npx create react-app appname
+npm create vite@latest Appname :-
+package name: enter 
+framework : react 
+variant : javascript 
+install npm and start now : yes
+npm run dev
+
+Activities :-
+who's market hight is high ?
+angular vs react
+why react created ?
+what is components ?
+types of component ?
+where we use componentin recat with 2 examples ?
+what is props ?
+types of props ?
+why we use props with 2 examples ?
+
+
